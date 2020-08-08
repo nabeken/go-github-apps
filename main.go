@@ -26,7 +26,6 @@ func main() {
 	appID := flag.Int64("app-id", 0, "App ID")
 	instID := flag.Int64("inst-id", 0, "Installation ID")
 	export := flag.Bool("export", false, "show token as 'export GITHUB_TOKEN=...'")
-	flag.Parse()
 
 	origUsage := flag.Usage
 	flag.Usage = func() {
@@ -35,6 +34,8 @@ func main() {
 		fmt.Fprintf(os.Stderr, "== Build Info ==\n")
 		versionInfo()
 	}
+
+	flag.Parse()
 
 	if *appID == 0 || *instID == 0 {
 		fmt.Fprintf(os.Stderr, "App ID and Installation ID are required.\n\n")
