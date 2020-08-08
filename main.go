@@ -12,11 +12,29 @@ import (
 	"github.com/bradleyfalzon/ghinstallation"
 )
 
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
+)
+
+func versionInfo() {
+	fmt.Fprintf(os.Stderr, "Version: %s\nCommit: %s\nBuiltAt: %s\n", version, commit, date)
+}
+
 func main() {
 	appID := flag.Int64("app-id", 0, "App ID")
 	instID := flag.Int64("inst-id", 0, "Installation ID")
 	export := flag.Bool("export", false, "show token as 'export GITHUB_TOKEN=...'")
 	flag.Parse()
+
+	origUsage := flag.Usage
+	flag.Usage = func() {
+		origUsage()
+		fmt.Fprintf(os.Stderr, "\n")
+		fmt.Fprintf(os.Stderr, "== Build Info ==\n")
+		versionInfo()
+	}
 
 	if *appID == 0 || *instID == 0 {
 		fmt.Fprintf(os.Stderr, "App ID and Installation ID are required.\n\n")
