@@ -29,6 +29,20 @@ eval $(go-github-apps -export -app-id 12345 -inst-id 123456)
 # github token is now exported to GITHUB_TOKEN environment variable
 ```
 
+## Installation
+
+https://github.com/nabeken/go-github-apps/releases
+
+## Installation for continuous integration
+
+`install-via-release.sh` allows you to grab the binary into the current working directory so that you can easy integrate it into your pipiline.
+
+**Example**:
+```sh
+curl -sSLf https://raw.githubusercontent.com/nabeken/go-github-apps/master/install-via-release.sh | bash -s -- -v v0.0.3
+sudo cp go-github-apps /usr/local/bin
+```
+
 ## AppID and Installation ID
 
 You can find how to get those ID at https://github.com/bradleyfalzon/ghinstallation#what-is-app-id-and-installation-id
