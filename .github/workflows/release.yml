@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    name: Release
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Go 1.14.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: '^1.14.1'
+      id: go
+
+    - name: Install goxc
+      run: go get github.com/laher/goxc
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+
+    - name: Get dependencies
+      run: |
+        go get -v -t -d ./...
+
+    - name: Build release binaries
+      run: |
+        goxc -tasks='xc archive' -bc="freebsd,amd64 linux,amd64 windows,386 darwin,amd64" -d .
+
+    - name: Show binaries
+      run: ls -alh snapshot
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          snapshot/go-github-apps_*.zip
+          snapshot/go-github-apps_*.tar.gz
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
