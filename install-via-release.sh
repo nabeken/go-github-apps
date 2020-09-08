@@ -58,5 +58,3 @@ popd > /dev/null
 
 FN="$(basename ${URL})"
 tar xvf "${DIR}/${FN}" go-github-apps || exit 1
-
-./go-github-apps -h
