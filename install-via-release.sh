@@ -30,7 +30,7 @@ URL=
 BASE_URL="https://github.com/nabeken/go-github-apps/releases/download/${VERSION}"
 
 case "$(uname -s)" in
-  linux)
+  Linux)
     URL="${BASE_URL}/go-github-apps_${VERSION#v}_linux_amd64.tar.gz"
     ;;
   Darwin)
@@ -38,6 +38,7 @@ case "$(uname -s)" in
     ;;
   *)
     echo "Currently $(uname -s) isn't supported. PR is welcome." >&2
+    exit 1
     ;;
 esac
 
