@@ -1,0 +1,25 @@
+name: Test Action
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test_action:
+    name: Run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get GITHUB_TOKEN for Github Apps
+        uses: nabeken/go-github-apps@v0
+        id: go-github-apps
+        with:
+          installation_id: ${{ secrets.installation_id }}
+          app_id: ${{ secrets.app_id }}
+          private_key: ${{ secrets.private_key }}
+
+      - name: Test Github API call
+        run: |
+          curl --fail -H 'Authorization: token ${{ steps.go-github-apps.outputs.app_github_token }}' https://api.github.com/

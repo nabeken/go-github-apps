@@ -4,8 +4,8 @@
 
 When you want to call Github APIs from machines, you would want an access token which independs of a real account.
 Github provides several ways to issue tokens, for example:
-- Issue Personal Access Token via machine-user: Before Github Apps exists, this is typical method to issue a token but it consumes one user seats.
-- Create Github Apps and issue a token for the app: This is a new way and recommended way. The problem is [it's not that easy to issue a token](https://docs.github.com/en/developers/apps/authenticating-with-github-apps#authenticating-as-a-github-app) just to automate small stuff.
+- **Personal Access Token via machine-user**: Before Github Apps exists, this is typical method to issue a token but it consumes one user seats.
+- **Github Apps**: This is a new and recommended way. The problem is [it's not that easy to issue a token](https://docs.github.com/en/developers/apps/authenticating-with-github-apps#authenticating-as-a-github-app) just to automate small stuff.
 
 This command-line tool allows you to get a token with just providing `App ID`, `Installation ID` and the private key.
 
@@ -41,6 +41,25 @@ https://github.com/nabeken/go-github-apps/releases
 ```sh
 curl -sSLf https://raw.githubusercontent.com/nabeken/go-github-apps/master/install-via-release.sh | bash -s -- -v v0.0.3
 sudo cp go-github-apps /usr/local/bin
+```
+
+## Github Actions
+
+You can automate issuing a token with Github Actions.
+
+Example:
+```yml
+- name: Get GITHUB_TOKEN for Github Apps
+  uses: nabeken/go-github-apps@v0
+  id: go-github-apps
+  with:
+    installation_id: ${{ secrets.installation_id }}
+    app_id: ${{ secrets.app_id }}
+    private_key: ${{ secrets.private_key }}
+
+- name: Test Github API call
+  run: |
+    curl --fail -H 'Authorization: token ${{ steps.go-github-apps.outputs.app_github_token }}' https://api.github.com/
 ```
 
 ## AppID and Installation ID
