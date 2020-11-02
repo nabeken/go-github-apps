@@ -1,9 +1,10 @@
 name: Test Action
 
 on:
+  pull_request:
   push:
     branches:
-      - gh-action
+      - master
 
 jobs:
   test_action:
@@ -12,7 +13,7 @@ jobs:
 
     steps:
       - name: Get GITHUB_TOKEN for Github Apps
-        uses: nabeken/go-github-apps@gh-action
+        uses: nabeken/go-github-apps@v0
         id: go-github-apps
         with:
           installation_id: ${{ secrets.installation_id }}
