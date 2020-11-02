@@ -1,0 +1,30 @@
+inputs:
+  version:
+    description: "A version to install"
+    default: "0.1.1"
+  installation_id:
+    description: "Github Apps Installation ID"
+  app_id:
+    description: "Github Apps App ID"
+  private_key:
+    description: "Github Apps Private Key"
+
+outputs:
+  app_github_token:
+    description: "GITHUB_TOKEN for your Github Apps"
+    value: ${{ steps.go-github-apps.outputs.github_token }}
+
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        curl -sSLf https://raw.githubusercontent.com/nabeken/go-github-apps/master/install-via-release.sh | bash -s -- -v v${{ inputs.version }}
+        sudo cp go-github-apps /usr/local/bin
+      shell: bash
+    - id: go-github-apps
+      run: |
+        T=$(mktemp)
+        trap "rm -f $T" 1 2 3 15
+        env GITHUB_PRIV_KEY="${{ inputs.private_key }}" go-github-apps -inst-id ${{ inputs.installation_id }} -app-id ${{ inputs.app_id }} > $T
+        echo "::set-output name=github_token::$(cat $T)"
+      shell: bash
