@@ -1,6 +1,6 @@
 # go-github-apps
 
-`go-github-apps` is a command-line tool to retrieve a github access token for your Github Apps.
+`go-github-apps` is a command-line tool to retrieve a Github Apps Installation Token.
 
 When you want to call Github APIs from machines, you would want an access token which independs of a real account.
 Github provides several ways to issue tokens, for example:
