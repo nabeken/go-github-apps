@@ -15,6 +15,7 @@ builds:
       - darwin
     goarch:
       - amd64
+      - arm64
 checksum:
   name_template: 'checksums.txt'
 snapshot:
