@@ -10,6 +10,36 @@ usage() {
   echo "usage: $0 -v VERSION" >&2
 }
 
+get_arch() {
+  case "$(uname -m)" in
+    aarch64|arm64)
+      echo "arm64"
+      ;;
+    x86_64)
+      echo "amd64"
+      ;;
+    *)
+      echo "Currently $(uname -m) isn't supported. PR is welcome." >&2
+      exit 1
+      ;;
+  esac
+}
+
+get_os() {
+  case "$(uname -s)" in
+    Linux)
+      echo linux
+      ;;
+    Darwin)
+      echo darwin
+      ;;
+    *)
+      echo "Currently $(uname -s) isn't supported. PR is welcome." >&2
+      exit 1
+      ;;
+  esac
+}
+
 while getopts hv: OPT; do
   case $OPT in
     v)
@@ -26,21 +56,8 @@ if [ -z "${VERSION}" ]; then
   exit 1
 fi
 
-URL=
 BASE_URL="https://github.com/nabeken/go-github-apps/releases/download/${VERSION}"
-
-case "$(uname -s)" in
-  Linux)
-    URL="${BASE_URL}/go-github-apps_${VERSION#v}_linux_amd64.tar.gz"
-    ;;
-  Darwin)
-    URL="${BASE_URL}/go-github-apps_${VERSION#v}_darwin_amd64.tar.gz"
-    ;;
-  *)
-    echo "Currently $(uname -s) isn't supported. PR is welcome." >&2
-    exit 1
-    ;;
-esac
+URL="${BASE_URL}/go-github-apps_${VERSION#v}_$(get_os)_$(get_arch).tar.gz"
 
 shift $((OPTIND - 1))
 
