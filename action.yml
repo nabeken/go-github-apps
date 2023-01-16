@@ -26,5 +26,5 @@ runs:
         T=$(mktemp)
         trap "rm -f $T" 1 2 3 15
         env GITHUB_PRIV_KEY="${{ inputs.private_key }}" go-github-apps -inst-id ${{ inputs.installation_id }} -app-id ${{ inputs.app_id }} > $T
-        echo "::set-output name=github_token::$(cat $T)"
+        echo "github_token=$(cat $T)" >> $GITHUB_OUTPUT
       shell: bash
