@@ -9,8 +9,8 @@ on:
       - v0
 
 jobs:
-  test_action:
-    name: Run
+  test_action_with_version:
+    name: Run the action with the version
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +22,23 @@ jobs:
           app_id: ${{ secrets.app_id }}
           private_key: ${{ secrets.private_key }}
           version: "0.1.6"
+
+      - name: Test Github API call
+        run: |
+          curl --fail -H 'Authorization: token ${{ steps.go-github-apps.outputs.app_github_token }}' https://api.github.com/
+
+  test_action_with_default:
+    name: Run the action with the default version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get GITHUB_TOKEN for Github Apps
+        uses: nabeken/go-github-apps@v0
+        id: go-github-apps
+        with:
+          installation_id: ${{ secrets.installation_id }}
+          app_id: ${{ secrets.app_id }}
+          private_key: ${{ secrets.private_key }}
 
       - name: Test Github API call
         run: |
