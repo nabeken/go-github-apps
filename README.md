@@ -4,7 +4,7 @@
 
 When you want to call Github APIs from machines, you would want an access token which independs of a real account.
 Github provides several ways to issue tokens, for example:
-- **Personal Access Token via machine-user**: Before Github Apps exists, this is typical method to issue a token but it consumes one user seats.
+- **Personal Access Token via machine-user**: Before Github Apps exists, this is a typical method to issue a token but it consumes one user seats.
 - **Github Apps**: This is a new and recommended way. The problem is [it's not that easy to issue a token](https://docs.github.com/en/developers/apps/authenticating-with-github-apps#authenticating-as-a-github-app) just to automate small stuff.
 
 This command-line tool allows you to get a token with just providing `App ID`, `Installation ID` and the private key.
@@ -12,13 +12,17 @@ This command-line tool allows you to get a token with just providing `App ID`, `
 ## Usage
 
 ```sh
-Usage of go-github-apps:
+Usage of ./go-github-apps:
   -app-id int
     	App ID
   -export
     	show token as 'export GITHUB_TOKEN=...'
   -inst-id int
     	Installation ID
+  -show-insts
+    	show all of the installations for the app
+  -version
+    	show version info
 ```
 
 **Example**:
@@ -28,6 +32,30 @@ eval $(go-github-apps -export -app-id 12345 -inst-id 123456)
 
 # github token is now exported to GITHUB_TOKEN environment variable
 ```
+
+## AppID and Installation ID
+
+As for the App ID, you can get it via the Github Apps page.
+
+As for the Installation ID, you can now find it with the `-show-insts` option:
+```sh
+export GITHUB_PRIV_KEY=$(cat your-apps-2020-08-07.private-key.pem)
+
+./go-github-apps -app-id 12345 -show-insts
+[]*github.Installation{
+  &github.Installation{
+    ID:       &123456789,
+    NodeID:   (*string)(nil),
+    AppID:    &12345,
+    AppSlug:  &"go-github-apps-test",
+    TargetID: &1234,
+...
+  },
+}
+```
+
+It shows the response from [`https://api.github.com/app/installations`](https://docs.github.com/en/rest/apps/apps?apiVersion=2022-11-28#list-installations-for-the-authenticated-app).
+If you install the app for multiple organizations and/or users, you may see multiple responses. You need to select one of the installations to use with this CLI.
 
 ## Installation
 
@@ -61,7 +89,3 @@ Example:
   run: |
     curl --fail -H 'Authorization: token ${{ steps.go-github-apps.outputs.app_github_token }}' https://api.github.com/
 ```
-
-## AppID and Installation ID
-
-You can find how to get those ID at https://github.com/bradleyfalzon/ghinstallation#what-is-app-id-and-installation-id
