@@ -99,3 +99,5 @@ Example:
     - Update the branch to update *the default version* in the `action.yml`
     - Merge the PR
 - Tag `v0`
+    - `git tag -f v0`
+    - `git push -f origin refs/tags/v0`
