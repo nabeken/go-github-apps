@@ -89,3 +89,13 @@ Example:
   run: |
     curl --fail -H 'Authorization: token ${{ steps.go-github-apps.outputs.app_github_token }}' https://api.github.com/
 ```
+
+## Release
+
+- Just tag a new release as usual
+- To update the default version in the action, you need to update `v0` tag.
+    - Create a branch that update "version" in the Github Actions (not the default version)
+    - Create a PR to confirm that the new release works
+    - Update the branch to update *the default version* in the `action.yml`
+    - Merge the PR
+- Tag `v0`
