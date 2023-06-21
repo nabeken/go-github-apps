@@ -8,6 +8,9 @@ inputs:
     description: "Github Apps App ID"
   private_key:
     description: "Github Apps Private Key"
+  github_url:
+    description: "Github API URL, for use with Github Enterprise"
+    default: "https://api.github.com/"
 
 outputs:
   app_github_token:
@@ -25,6 +28,10 @@ runs:
       run: |
         T=$(mktemp)
         trap "rm -f $T" 1 2 3 15
-        env GITHUB_PRIV_KEY="${{ inputs.private_key }}" go-github-apps -inst-id ${{ inputs.installation_id }} -app-id ${{ inputs.app_id }} > $T
+        urlparam=""
+        if [ -n "${{ inputs.github_url }}" ]; then
+          urlparam="-url ${{ inputs.github_url }}"
+        fi
+        env GITHUB_PRIV_KEY="${{ inputs.private_key }}" go-github-apps -inst-id ${{ inputs.installation_id }} -app-id ${{ inputs.app_id }} $urlparam > $T
         echo "github_token=$(cat $T)" >> $GITHUB_OUTPUT
       shell: bash
