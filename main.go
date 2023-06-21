@@ -11,7 +11,6 @@ import (
 
 	"github.com/bradleyfalzon/ghinstallation"
 	"github.com/google/go-github/v52/github"
-	"github.com/k0kubun/pp/v3"
 )
 
 var (
@@ -30,6 +29,7 @@ func main() {
 	export := flag.Bool("export", false, "show token as 'export GITHUB_TOKEN=...'")
 	showVersion := flag.Bool("version", false, "show version info")
 	showInsts := flag.Bool("show-insts", false, "show all of the installations for the app")
+	githubURL := flag.String("url", "", "Full URL for a Github Enterprise installation, example 'https://github.example.com/api/v3'")
 
 	origUsage := flag.Usage
 	flag.Usage = func() {
@@ -60,7 +60,7 @@ func main() {
 			os.Exit(1)
 		}
 
-		showInstallations(*appID, []byte(key))
+		showInstallations(*appID, []byte(key), githubURL)
 
 		return
 	}
@@ -75,6 +75,10 @@ func main() {
 	itr, err := ghinstallation.New(http.DefaultTransport, *appID, *instID, []byte(key))
 	if err != nil {
 		log.Fatal(err)
+	}
+
+	if githubURL != nil && *githubURL != "" {
+		itr.BaseURL = *githubURL
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Minute)
@@ -96,13 +100,22 @@ func showExport(token string) {
 	fmt.Printf("export GITHUB_TOKEN=%s\n", token)
 }
 
-func showInstallations(appID int64, key []byte) {
+func showInstallations(appID int64, key []byte, githubURL *string) {
 	atr, err := ghinstallation.NewAppsTransport(http.DefaultTransport, appID, key)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	client := github.NewClient(&http.Client{Transport: atr})
+	var client *github.Client
+	if githubURL != nil && *githubURL != "" {
+		atr.BaseURL = *githubURL
+		client, err = github.NewEnterpriseClient(*githubURL, *githubURL, &http.Client{Transport: atr})
+		if err != nil {
+			log.Fatalf("failed creating enterprise client: %v", err)
+		}
+	} else {
+		client = github.NewClient(&http.Client{Transport: atr})
+	}
 
 	opts := &github.ListOptions{
 		PerPage: 10,
@@ -117,7 +130,7 @@ func showInstallations(appID int64, key []byte) {
 			log.Fatal(err)
 		}
 
-		pp.Println(inst)
+		fmt.Println(inst)
 
 		if resp.NextPage == 0 {
 			break
