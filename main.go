@@ -11,6 +11,7 @@ import (
 
 	"github.com/bradleyfalzon/ghinstallation"
 	"github.com/google/go-github/v52/github"
+	"github.com/k0kubun/pp/v3"
 )
 
 var (
@@ -130,7 +131,7 @@ func showInstallations(appID int64, key []byte, githubURL *string) {
 			log.Fatal(err)
 		}
 
-		fmt.Println(inst)
+		pp.Println(inst)
 
 		if resp.NextPage == 0 {
 			break
