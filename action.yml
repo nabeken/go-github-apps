@@ -1,7 +1,7 @@
 inputs:
   version:
     description: "A version to install"
-    default: "0.1.6"
+    default: "0.1.7"
   installation_id:
     description: "Github Apps Installation ID"
   app_id:
