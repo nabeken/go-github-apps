@@ -21,6 +21,8 @@ Usage of ./go-github-apps:
     	Installation ID
   -show-insts
     	show all of the installations for the app
+  -url string
+        Full URL for a Github Enterprise installation, example 'https://github.example.com/api/v3'
   -version
     	show version info
 ```
