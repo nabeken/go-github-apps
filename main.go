@@ -30,7 +30,7 @@ func main() {
 	export := flag.Bool("export", false, "show token as 'export GITHUB_TOKEN=...'")
 	showVersion := flag.Bool("version", false, "show version info")
 	showInsts := flag.Bool("show-insts", false, "show all of the installations for the app")
-	githubURL := flag.String("url", "", "Full URL for a Github Enterprise installation, example 'https://github.example.com/api/v3'")
+	githubURL := flag.String("url", "https://api.github.com", "specify the base URL for Github API, for use with Github Enterprise. Example: 'https://github.example.com/api/v3'")
 
 	origUsage := flag.Usage
 	flag.Usage = func() {
@@ -61,7 +61,7 @@ func main() {
 			os.Exit(1)
 		}
 
-		showInstallations(*appID, []byte(key), githubURL)
+		showInstallations(*appID, []byte(key), *githubURL)
 
 		return
 	}
@@ -101,16 +101,16 @@ func showExport(token string) {
 	fmt.Printf("export GITHUB_TOKEN=%s\n", token)
 }
 
-func showInstallations(appID int64, key []byte, githubURL *string) {
+func showInstallations(appID int64, key []byte, githubURL string) {
 	atr, err := ghinstallation.NewAppsTransport(http.DefaultTransport, appID, key)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	var client *github.Client
-	if githubURL != nil && *githubURL != "" {
-		atr.BaseURL = *githubURL
-		client, err = github.NewEnterpriseClient(*githubURL, *githubURL, &http.Client{Transport: atr})
+	if githubURL != "" {
+		atr.BaseURL = githubURL
+		client, err = github.NewEnterpriseClient(githubURL, githubURL, &http.Client{Transport: atr})
 		if err != nil {
 			log.Fatalf("failed creating enterprise client: %v", err)
 		}
