@@ -21,7 +21,7 @@ jobs:
           installation_id: ${{ secrets.installation_id }}
           app_id: ${{ secrets.app_id }}
           private_key: ${{ secrets.private_key }}
-          version: "0.1.6"
+          version: "0.1.7"
 
       - name: Test Github API call
         run: |
