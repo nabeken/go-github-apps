@@ -10,7 +10,7 @@ inputs:
     description: "Github Apps Private Key"
   github_url:
     description: "Github API URL, for use with Github Enterprise"
-    default: "https://api.github.com/"
+    default: "https://api.github.com"
 
 outputs:
   app_github_token:
