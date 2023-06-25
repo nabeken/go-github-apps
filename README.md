@@ -1,5 +1,8 @@
 # go-github-apps
 
+[![Go](https://github.com/nabeken/go-github-apps/actions/workflows/go.yml/badge.svg)](https://github.com/nabeken/go-github-apps/actions/workflows/go.yml)
+[![Test Action](https://github.com/nabeken/go-github-apps/actions/workflows/test-action.yml/badge.svg)](https://github.com/nabeken/go-github-apps/actions/workflows/test-action.yml)
+
 `go-github-apps` is a command-line tool to retrieve a Github Apps Installation Token.
 
 When you want to call Github APIs from machines, you would want an access token which independs of a real account.
