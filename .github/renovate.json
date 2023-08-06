@@ -18,6 +18,10 @@
     {
       "matchPackagePatterns": ["github-actions"],
       "groupName": "github-actions"
+    },
+    {
+      "matchPackagePatterns": ["golang"],
+      "groupName": "Go"
     }
   ]
 }
