@@ -13,8 +13,8 @@ jobs:
         uses: nabeken/go-github-apps@v0
         id: go-github-apps
         with:
-          installation_id: ${{ secrets.installation_id }}
-          app_id: ${{ secrets.app_id }}
+          installation_id: ${{ secrets.renovate_app_inst_id }}
+          app_id: ${{ secrets.renovate_app_id }}
           private_key: ${{ secrets.RENOVATE_APP_PRIV_KEY }}
           version: "0.1.7"
 
