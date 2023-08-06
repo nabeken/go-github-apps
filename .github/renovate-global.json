@@ -2,9 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "branchPrefix": "github-renovate/",
   "dependencyDashboardTitle": "Dependency Dashboard self-hosted",
-  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+  "username": "renovate-for-tknetworks[bot]",
+  "gitAuthor": "Self-hosted Renovate Bot <141540558+renovate-for-tknetworks[bot]@users.noreply.github.enterprise.com>",
   "onboarding": true,
   "onboardingBranch": "github-renovate/configure",
   "platform": "github",
-  "repositories": []
+  "repositories": [
+    "nabeken/go-github-apps"
+  ]
 }
