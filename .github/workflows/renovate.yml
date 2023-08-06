@@ -1,0 +1,33 @@
+name: Renovate
+on:
+  schedule:
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Get GITHUB_TOKEN for Github Apps
+        uses: nabeken/go-github-apps@v0
+        id: go-github-apps
+        with:
+          installation_id: ${{ secrets.installation_id }}
+          app_id: ${{ secrets.app_id }}
+          private_key: ${{ secrets.RENOVATE_APP_PRIV_KEY }}
+          version: "0.1.7"
+
+      - name: Checkout
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+
+      - name: Setup node
+        uses: actions/setup-node@e33196f7422957bea03ed53f6fbb155025ffc7b8 # v3.7.0
+
+      - name: Renovate
+        uses: renovatebot/github-action@0868f611868abf92ddbb6f2c01d2b6c2d818ec38 # v38.1.7
+        with:
+          configurationFile: .github/renovate-global.json
+          token: '${{ steps.go-github-apps.outputs.app_github_token }}'
+        env:
+          LOG_LEVEL: debug
