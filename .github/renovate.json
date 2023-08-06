@@ -2,26 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
 
   "extends": [
-    "config:recommended",
-    ":prHourlyLimitNone",
-    ":prConcurrentLimit10",
-    ":separateMultipleMajorReleases",
-    "group:allNonMajor",
-    "docker:pinDigests",
-    "helpers:pinGitHubActionDigests",
-    ":pinDevDependencies",
-
-    "regexManagers:githubActionsVersions"
-  ],
-
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["github-actions"],
-      "groupName": "github-actions"
-    },
-    {
-      "matchPackagePatterns": ["golang"],
-      "groupName": "Go"
-    }
+    "github>nabeken/renovate-config-oss",
+    "github>nabeken/renovate-config-oss:recommended",
+    "github>nabeken/renovate-config-oss:groupGoVersionUpgrade",
+    "github>nabeken/renovate-config-oss:groupGithubActions"
   ]
 }
