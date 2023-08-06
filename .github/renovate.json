@@ -3,7 +3,7 @@
 
   "extends": [
     "config:recommended",
-    ":prHourlyLimit",
+    ":prHourlyLimitNone",
     ":prConcurrentLimit10",
     ":separateMultipleMajorReleases",
     "group:allNonMajor",
