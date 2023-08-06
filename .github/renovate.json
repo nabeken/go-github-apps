@@ -3,6 +3,8 @@
 
   "extends": [
     "config:recommended",
+    ":separateMultipleMajorReleases",
+    "group:allNonMajor",
     "docker:pinDigests",
     "helpers:pinGitHubActionDigests",
     ":pinDevDependencies"
