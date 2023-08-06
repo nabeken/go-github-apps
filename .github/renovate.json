@@ -9,7 +9,9 @@
     "group:allNonMajor",
     "docker:pinDigests",
     "helpers:pinGitHubActionDigests",
-    ":pinDevDependencies"
+    ":pinDevDependencies",
+
+    "regexManagers:githubActionsVersions"
   ],
 
   "packageRules": [
