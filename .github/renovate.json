@@ -3,6 +3,8 @@
 
   "extends": [
     "config:recommended",
+    ":prHourlyLimit",
+    ":prConcurrentLimit10",
     ":separateMultipleMajorReleases",
     "group:allNonMajor",
     "docker:pinDigests",
@@ -12,9 +14,8 @@
 
   "packageRules": [
     {
-      "description": "Update the Renovate GitHub action weekly with fix type",
-      "packageNames": "renovatebot/github-action",
-      "extends": [":semanticCommitType(fix)", "schedule:weekly"]
+      "matchPackagePatterns": ["github-actions"],
+      "groupName": "github-actions"
     }
   ]
 }
