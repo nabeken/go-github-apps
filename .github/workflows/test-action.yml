@@ -8,6 +8,10 @@ on:
     tags:
       - v0
 
+env:
+  # renovate: datasource=github-releases depName=nabeken/go-github-apps
+  GO_GITHUB_APPS_VERSION: '0.1.7'
+
 jobs:
   test_action_with_version:
     name: Run the action with the version
@@ -21,7 +25,7 @@ jobs:
           installation_id: ${{ secrets.installation_id }}
           app_id: ${{ secrets.app_id }}
           private_key: ${{ secrets.private_key }}
-          version: "0.1.7"
+          version: '${{ env.GO_GITHUB_APPS_VERSION }}'
 
       - name: Test Github API call
         run: |
