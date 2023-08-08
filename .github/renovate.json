@@ -11,7 +11,7 @@
   "packageRules": [
     {
       "description": "strip v prefix in the version",
-      "matchPackageNames": ["go-github-apps"],
+      "matchPackageNames": ["nabeken/go-github-apps"],
       "extractVersion": "^v(?<version>.*)$"
     }
   ]
