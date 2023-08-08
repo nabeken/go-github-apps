@@ -6,5 +6,13 @@
     "github>nabeken/renovate-config-oss:recommended",
     "github>nabeken/renovate-config-oss:groupGoVersionUpgrade",
     "github>nabeken/renovate-config-oss:groupGithubActions"
+  ],
+
+  "packageRules": [
+    {
+      "description": "strip v prefix in the version",
+      "matchPackageNames": ["go-github-apps"],
+      "extractVersion": "^v(?<version>.*)$"
+    }
   ]
 }
