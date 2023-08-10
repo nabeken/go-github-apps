@@ -1,0 +1,23 @@
+name: Bump the actions version
+
+on:
+  workflow_dispatch:
+
+env:
+  LATEST_TAG: 'vtest'
+
+jobs:
+  build:
+    name: Update the tag for the action
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+
+    - uses: fregante/setup-git-user@v2
+
+    - name: Tag the actions release tag
+      run: |
+        git tag -f "${LATEST_TAG}"
+        git push -f origin "refs/tags/${LATEST_TAG}"
