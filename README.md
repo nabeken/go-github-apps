@@ -98,12 +98,8 @@ Example:
 ## Release
 
 - Just tag a new release as usual
-- Renovate will update the update "version" in the Github Actions (not the default version)
-  - Merge the PR if the test works
-  - At this point, the default version test still works with the previous version
-- To update the default version in the action, you need to update `v0` tag.
-    - Update the branch to update *the default version* in the `action.yml`
-    - Merge the PR
+- Renovate will update "version" in several places once it detects a new version of `go-github-apps` so you can merge it if you're happy with the result
+  - "version" in the github actions for testing
+  - default "version" in `action.yml`
 - Tag `v0`
-    - `git tag -f v0`
-    - `git push -f origin refs/tags/v0`
+  - Run [`Bump the actions version`](https://github.com/nabeken/go-github-apps/actions/workflows/update_actions_tag.yml) to update `v0` tag with the latest main branch
