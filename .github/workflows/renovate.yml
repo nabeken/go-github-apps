@@ -10,7 +10,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Get GITHUB_TOKEN for Github Apps
-        uses: nabeken/go-github-apps@8eb7ca72b1a91f936373b9b0a072694aef88c981 # v0
+        uses: nabeken/go-github-apps@d189a167116aca75bf64df66b602894206fce3e7 # v0
         id: go-github-apps
         with:
           installation_id: ${{ secrets.renovate_app_inst_id }}
