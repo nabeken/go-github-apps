@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  LATEST_TAG: 'vtest'
+  LATEST_TAG: 'v0'
 
 jobs:
   build:
