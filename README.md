@@ -97,7 +97,7 @@ Example:
 
 ## Release
 
-- Just tag a new release as usual
+- Merge a release PR, created by release-please action
 - Renovate will update "version" in several places once it detects a new version of `go-github-apps` so you can merge it if you're happy with the result
   - "version" in the github actions for testing
   - default "version" in `action.yml`
