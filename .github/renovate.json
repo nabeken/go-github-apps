@@ -7,6 +7,7 @@
     "github>nabeken/renovate-config-oss:groupGoVersionUpgrade",
     "github>nabeken/renovate-config-oss:githubLocalActionsDefaultVersions",
     "github>nabeken/renovate-config-oss:semanticCommitsFixDeps",
+    "github>nabeken/renovate-config-oss:automergeGoPatch",
     "github>nabeken/renovate-config-oss:groupGithubActions"
   ],
 
