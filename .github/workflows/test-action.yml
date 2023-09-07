@@ -13,6 +13,26 @@ env:
   GO_GITHUB_APPS_VERSION: '0.1.10'
 
 jobs:
+  test_action_with_local:
+    name: Run the action with local version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
+
+      - name: Get GITHUB_TOKEN for Github Apps
+        uses: ./
+        id: go-github-apps
+        with:
+          installation_id: ${{ secrets.installation_id }}
+          app_id: ${{ secrets.app_id }}
+          private_key: ${{ secrets.private_key }}
+
+      - name: Test Github API call
+        run: |
+          curl --fail -H 'Authorization: token ${{ steps.go-github-apps.outputs.app_github_token }}' https://api.github.com/
+
   test_action_with_version:
     name: Run the action with the version
     runs-on: ubuntu-latest

@@ -22,19 +22,26 @@ runs:
   using: "composite"
   steps:
     - run: |
-        curl -sSLf https://raw.githubusercontent.com/nabeken/go-github-apps/master/install-via-release.sh | bash -s -- -v v${{ inputs.version }}
+        curl -sSLf https://raw.githubusercontent.com/nabeken/go-github-apps/master/install-via-release.sh | bash -s -- -v "${VERSION}"
         sudo cp go-github-apps /usr/local/bin
       shell: bash
+      env:
+        VERSION: "v${{ inputs.version }}"
     - id: go-github-apps
       run: |
         T=$(mktemp)
         trap "rm -f $T" 1 2 3 15
 
         urlparam=""
-        if [ -n "${{ inputs.github_url }}" ]; then
-          urlparam="-url ${{ inputs.github_url }}"
+        if [ -n "${GITHUB_URL}" ]; then
+          urlparam="-url ${GITHUB_URL}"
         fi
 
-        env GITHUB_PRIV_KEY="${{ inputs.private_key }}" go-github-apps -inst-id ${{ inputs.installation_id }} -app-id ${{ inputs.app_id }} $urlparam > $T
+        go-github-apps -app-id "${GH_APP_ID}" -inst-id "${GH_APP_INST_ID}" $urlparam > $T
         echo "github_token=$(cat $T)" >> $GITHUB_OUTPUT
       shell: bash
+      env:
+        GITHUB_URL: "${{ inputs.github_url }}"
+        GITHUB_PRIV_KEY: "${{ inputs.private_key }}"
+        GH_APP_ID: "${{ inputs.app_id }}"
+        GH_APP_INST_ID: "${{ inputs.installation_id }}"
