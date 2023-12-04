@@ -29,3 +29,20 @@ jobs:
 
     - name: Test
       run: go test -v -cover ./...
+
+    - name: Test with Github API
+      run: |
+        T=$(mktemp)
+        trap "rm -f $T" 1 2 3 15
+
+        urlparam=""
+        if [ -n "${GITHUB_URL}" ]; then
+          urlparam="-url ${GITHUB_URL}"
+        fi
+
+        eval "$(./go-github-apps -export -app-id "${GH_APP_ID}" -inst-id "${GH_APP_INST_ID}")"
+        curl --fail -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/
+      env:
+        GH_APP_INST_ID: ${{ secrets.installation_id }}
+        GH_APP_ID: ${{ secrets.app_id }}
+        GITHUB_PRIV_KEY: ${{ secrets.private_key }}
