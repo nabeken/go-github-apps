@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.12](https://github.com/nabeken/go-github-apps/compare/v0.1.11...v0.1.12) (2023-12-07)
+
+
+### Bug Fixes
+
+* **deps:** update actions/setup-go action to v5 ([e168155](https://github.com/nabeken/go-github-apps/commit/e168155e0264153c26bc852adad2da0c79bb1ba2))
+* **deps:** update dependency golang to v1.21.5 ([26408af](https://github.com/nabeken/go-github-apps/commit/26408af40383d52c763d40d97e1e6827e5720bb6))
+
 ## [0.1.11](https://github.com/nabeken/go-github-apps/compare/v0.1.10...v0.1.11) (2023-12-04)
 
 
