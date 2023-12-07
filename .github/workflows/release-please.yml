@@ -24,5 +24,4 @@ jobs:
       - uses: google-github-actions/release-please-action@db8f2c60ee802b3748b512940dde88eabd7b7e01 # v3
         with:
           release-type: go
-          package-name: go-github-apps
           token: ${{ steps.go-github-apps.outputs.app_github_token }}
