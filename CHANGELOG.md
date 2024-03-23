@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.1.13](https://github.com/nabeken/go-github-apps/compare/v0.1.12...v0.1.13) (2024-03-23)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([12b9f9f](https://github.com/nabeken/go-github-apps/commit/12b9f9fa3138458a25b5995db56eb104030dca85))
+* **deps:** update dependency golang to v1.21.6 ([4cd86c6](https://github.com/nabeken/go-github-apps/commit/4cd86c6ec61ce9dcc3579e8ca9d6a29713cda1a1))
+* **deps:** update dependency golang to v1.22.0 ([35ee4c4](https://github.com/nabeken/go-github-apps/commit/35ee4c430351017f3a8e720a659ff4c7e89e554a))
+* **deps:** update dependency golang to v1.22.1 ([d836ff1](https://github.com/nabeken/go-github-apps/commit/d836ff14958a85a81f3cce34d442dfd6a5377d6e))
+* **deps:** update dependency nabeken/go-github-apps to v0.1.12 ([c9f34d8](https://github.com/nabeken/go-github-apps/commit/c9f34d845ebe2c96ab64ed90642d3de792e3c0fd))
+* **deps:** update google-github-actions/release-please-action digest to a2d8d68 ([cf0db91](https://github.com/nabeken/go-github-apps/commit/cf0db91e8634919b9a1de6bea625071c042dd95d))
+* **deps:** update google-github-actions/release-please-action digest to a37ac6e ([8529ac8](https://github.com/nabeken/go-github-apps/commit/8529ac8275ae94fec38fac56cf6042479bdd6147))
+* **deps:** update google-github-actions/release-please-action digest to cc61a07 ([b17795f](https://github.com/nabeken/go-github-apps/commit/b17795f61bd893d4417665458b673247e91a1617))
+* **deps:** update module github.com/bradleyfalzon/ghinstallation/v2 to v2.10.0 ([9222eac](https://github.com/nabeken/go-github-apps/commit/9222eac35724021ad5058a3d3af9e55fe8e7fea9))
+* **deps:** update module github.com/google/go-github/v57 to v60 ([1ffeaf1](https://github.com/nabeken/go-github-apps/commit/1ffeaf1add7be3ed9886575f61dc2622abfd3ae4))
+* **deps:** update nabeken/go-github-apps digest to 0577caf ([88111a7](https://github.com/nabeken/go-github-apps/commit/88111a70bd8fc5c51ebcc35bf05d3e69f31ceb6d))
+* **deps:** update suzuki-shunsuke/github-action-renovate-config-validator action to v1 ([41f0a98](https://github.com/nabeken/go-github-apps/commit/41f0a9806132def4ec3b25c4b86af2ef16129130))
+
 ## [0.1.12](https://github.com/nabeken/go-github-apps/compare/v0.1.11...v0.1.12) (2023-12-07)
 
 
