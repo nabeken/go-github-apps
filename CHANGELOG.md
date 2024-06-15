@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.1.14](https://github.com/nabeken/go-github-apps/compare/v0.1.13...v0.1.14) (2024-06-15)
+
+
+### Bug Fixes
+
+* **deps:** pin googleapis/release-please-action action to f3969c0 ([911f90b](https://github.com/nabeken/go-github-apps/commit/911f90beb74aa2f587ec37f9573af2316bfdd953))
+* **deps:** update actions/checkout digest to 0ad4b8f ([f701ae1](https://github.com/nabeken/go-github-apps/commit/f701ae1e434b7fdb335e71ae03715a29ea4966a4))
+* **deps:** update actions/checkout digest to 692973e ([0b1e408](https://github.com/nabeken/go-github-apps/commit/0b1e4080a439502a756dd516d43b54109145d58c))
+* **deps:** update actions/checkout digest to a5ac7e5 ([6126cf4](https://github.com/nabeken/go-github-apps/commit/6126cf471a4fa0cb2b1ce4225233f9e95606dc26))
+* **deps:** update actions/setup-go digest to cdcb360 ([303ee03](https://github.com/nabeken/go-github-apps/commit/303ee037cf1ca2835a291f4486937767f5ee9dde))
+* **deps:** update all non-major dependencies ([1fe262a](https://github.com/nabeken/go-github-apps/commit/1fe262aaded4b6aa7f95480fc90d507ce8446ac0))
+* **deps:** update dependency go to v1.22.2 ([e185319](https://github.com/nabeken/go-github-apps/commit/e1853199a3f5a17fc4c425a63e463f29db25d92c))
+* **deps:** update dependency go to v1.22.3 ([6ce17f7](https://github.com/nabeken/go-github-apps/commit/6ce17f7cf2033f182dc872e47cf2a1d61393501d))
+* **deps:** update dependency golang to v1.22.2 ([d9bfef5](https://github.com/nabeken/go-github-apps/commit/d9bfef519ae570ae143cb8d04107c409564a73db))
+* **deps:** update dependency golang to v1.22.3 ([0833ea4](https://github.com/nabeken/go-github-apps/commit/0833ea4938d1c579760287959ee6f2eda0cbb231))
+* **deps:** update dependency golang to v1.22.4 ([6a35858](https://github.com/nabeken/go-github-apps/commit/6a35858be1863eeeb1a2f8956151234b38ca5e25))
+* **deps:** update dependency nabeken/go-github-apps to v0.1.13 ([1003838](https://github.com/nabeken/go-github-apps/commit/100383811c7362e17ab90bb9d3d5b56d1aee07e6))
+* **deps:** update googleapis/release-please-action digest to 7987652 ([c5cc105](https://github.com/nabeken/go-github-apps/commit/c5cc105aa47e8e49c5aad5175854583ce138d7b4))
+* **deps:** update goreleaser/goreleaser-action action to v6 ([8e70db0](https://github.com/nabeken/go-github-apps/commit/8e70db02ba1cbd766f7e63a78d92892ecefc5fa7))
+* **deps:** update goreleaser/goreleaser-action digest to 5742e2a ([a2ff786](https://github.com/nabeken/go-github-apps/commit/a2ff78633fcad0a99764de504ef62c2162bae935))
+* **deps:** update nabeken/go-github-apps digest to 6eb3a08 ([70b1d0e](https://github.com/nabeken/go-github-apps/commit/70b1d0e49e1816893beaca2cd9d31451d7be9701))
+
 ## [0.1.13](https://github.com/nabeken/go-github-apps/compare/v0.1.12...v0.1.13) (2024-03-23)
 
 
