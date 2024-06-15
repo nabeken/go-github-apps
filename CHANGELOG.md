@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.15](https://github.com/nabeken/go-github-apps/compare/v0.1.14...v0.1.15) (2024-06-15)
+
+
+### Bug Fixes
+
+* **goreleaser:** fix args ([6ae0d34](https://github.com/nabeken/go-github-apps/commit/6ae0d3437ca6035f615598b269b11d0ff05f328b))
+
 ## [0.1.14](https://github.com/nabeken/go-github-apps/compare/v0.1.13...v0.1.14) (2024-06-15)
 
 
