@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.16](https://github.com/nabeken/go-github-apps/compare/v0.1.15...v0.1.16) (2024-07-16)
+
+
+### Bug Fixes
+
+* **deps:** update actions/setup-go digest to 0a12ed9 ([bc88c53](https://github.com/nabeken/go-github-apps/commit/bc88c53e28011caa8454e7ee548d16af8e8975d6))
+* **deps:** update dependency go to v1.22.5 ([c989542](https://github.com/nabeken/go-github-apps/commit/c989542245d6cf2fd08ed688776651af8d64828c))
+* **deps:** update dependency golang to v1.22.5 ([5c5d0ad](https://github.com/nabeken/go-github-apps/commit/5c5d0ad06056cd0f4d00516c30e99593b81c098d))
+* **deps:** update dependency nabeken/go-github-apps to v0.1.15 ([5943522](https://github.com/nabeken/go-github-apps/commit/59435220461103bc6f200d32915a4db1e874f388))
+* **deps:** update module github.com/google/go-github/v60 to v63 ([eb2abd9](https://github.com/nabeken/go-github-apps/commit/eb2abd9e3abcd0318d48732ff13d6551825e04b7))
+* **deps:** update nabeken/go-github-apps digest to ad9874f ([aa421a3](https://github.com/nabeken/go-github-apps/commit/aa421a36f7d184831fecac236b30d2cf79081ee9))
+* **deps:** use go-github/v63 ([e58cf1a](https://github.com/nabeken/go-github-apps/commit/e58cf1a47e79ce4b1de32630d6a55922f8f151d1))
+
 ## [0.1.15](https://github.com/nabeken/go-github-apps/compare/v0.1.14...v0.1.15) (2024-06-15)
 
 
