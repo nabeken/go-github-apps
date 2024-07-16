@@ -10,7 +10,7 @@ on:
 
 env:
   # renovate: datasource=github-releases depName=nabeken/go-github-apps
-  GO_GITHUB_APPS_VERSION: '0.1.15'
+  GO_GITHUB_APPS_VERSION: '0.1.16'
 
 jobs:
   test_action_with_local:
