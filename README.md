@@ -78,6 +78,10 @@ sudo cp go-github-apps /usr/local/bin
 
 ## Github Actions
 
+As of Aug, 2024, Github provides [the official actions](https://github.com/actions/create-github-app-token) to create a GitHub App installation access token. Please consider migrating to the official one.
+
+At certain point, I'll obsolete the github action in this repository.
+
 You can automate issuing a token with Github Actions.
 
 Example:
