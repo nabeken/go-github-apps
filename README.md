@@ -82,7 +82,25 @@ As of Aug, 2024, Github provides [the official actions](https://github.com/actio
 
 At certain point, I'll obsolete the github action in this repository.
 
-You can automate issuing a token with Github Actions.
+### Different from `actions/create-github-app-token`
+
+`go-github-apps` always receives an installation token for the installation under an installed owner (organization) where the official action only requires for a current repository.
+
+If you want to have an installation that works for the installation under installed owner (organization), you need to specify `owner` in the workflow:
+
+```yaml
+steps:
+- uses: actions/create-github-app-token@v1
+  id: app-token
+  with:
+    app-id: ${{ vars.APP_ID }}
+    private-key: ${{ secrets.PRIVATE_KEY }}
+    owner: ${{ github.repository_owner }}
+```
+
+### `go-github-apps`'s Github Actions
+
+You can automate issuing a token for Github Actions with `go-github-apps` but it will be obsoleted in the future as described above.
 
 Example:
 ```yml
