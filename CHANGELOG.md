@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.17](https://github.com/nabeken/go-github-apps/compare/v0.1.16...v0.1.17) (2024-08-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency go to v1.22.6 ([60cffb5](https://github.com/nabeken/go-github-apps/commit/60cffb58b2c50e4e6558d63aa6318aa0aa803a1d))
+* **deps:** update dependency go to v1.23.0 ([2222025](https://github.com/nabeken/go-github-apps/commit/22220256407a357d4dd8f52c2e9f92cc9e8ec0a5))
+* **deps:** update dependency golang to v1.22.6 ([cf09ecc](https://github.com/nabeken/go-github-apps/commit/cf09ecc956bf684d5ff10306b24b97cdf66e5c84))
+* **deps:** update dependency golang to v1.23.0 ([acdc17e](https://github.com/nabeken/go-github-apps/commit/acdc17e6c97adc7ee7194b9b378970787ed0b8fc))
+* **deps:** update dependency nabeken/go-github-apps to v0.1.16 ([146496b](https://github.com/nabeken/go-github-apps/commit/146496b9a19a71f2ec2405d5ea1dc2ff1b0a09d1))
+* **deps:** update github-actions ([3c07756](https://github.com/nabeken/go-github-apps/commit/3c07756e6f8718c741495e7d31c41460b8d11d9e))
+* **deps:** update module github.com/google/go-github/v63 to v64 ([dac9fc3](https://github.com/nabeken/go-github-apps/commit/dac9fc349a51391a31697778f3dc977f7b5f114e))
+
 ## [0.1.16](https://github.com/nabeken/go-github-apps/compare/v0.1.15...v0.1.16) (2024-07-16)
 
 
