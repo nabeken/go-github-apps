@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: Get GITHUB_TOKEN for Github Apps
-        uses: nabeken/go-github-apps@afd4a1da8d2eafaa6902580a943dc17dfd055ba9 # v0
+        uses: nabeken/go-github-apps@26f1e0f59f98903fca86f03b2bef2f32f25693e9 # v0
         id: go-github-apps
         with:
           installation_id: ${{ secrets.installation_id }}
@@ -57,7 +57,7 @@ jobs:
 
     steps:
       - name: Get GITHUB_TOKEN for Github Apps
-        uses: nabeken/go-github-apps@afd4a1da8d2eafaa6902580a943dc17dfd055ba9 # v0
+        uses: nabeken/go-github-apps@26f1e0f59f98903fca86f03b2bef2f32f25693e9 # v0
         id: go-github-apps
         with:
           installation_id: ${{ secrets.installation_id }}
