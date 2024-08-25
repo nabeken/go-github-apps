@@ -21,6 +21,11 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - name: The Github Actions will be obsoleted in the future
+      shell: bash
+      run: |
+        echo "::warning:: go-github-apps's Github Actions will be obsoleted in the future. Please see README about the migration to Github's official one." >&2
+
     - run: |
         curl -sSLf https://raw.githubusercontent.com/nabeken/go-github-apps/master/install-via-release.sh | bash -s -- -v "${VERSION}"
         sudo cp go-github-apps /usr/local/bin
