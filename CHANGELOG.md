@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0](https://github.com/nabeken/go-github-apps/compare/v0.1.17...v0.2.0) (2024-09-01)
+
+
+### Features
+
+* warning message regarding obsolete of the github action ([bfa5d60](https://github.com/nabeken/go-github-apps/commit/bfa5d60d6102dd3acd086681fb11253b8bf74be6))
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([b92915e](https://github.com/nabeken/go-github-apps/commit/b92915eb7e1ffa1ceded00878ec0c21c122cf633))
+* **deps:** update dependency nabeken/go-github-apps to v0.1.17 ([a4b2ad6](https://github.com/nabeken/go-github-apps/commit/a4b2ad68973c7946ea4e3371eceaea776388ee28))
+* **deps:** update suzuki-shunsuke/github-action-renovate-config-validator action to v1.1.0 ([2b75864](https://github.com/nabeken/go-github-apps/commit/2b758648bc1141bf36f8eb90e40f74b366c802aa))
+
 ## [0.1.17](https://github.com/nabeken/go-github-apps/compare/v0.1.16...v0.1.17) (2024-08-25)
 
 
