@@ -2,7 +2,7 @@ module github.com/nabeken/go-github-apps
 
 go 1.21
 
-toolchain go1.23.1
+toolchain go1.23.2
 
 require (
 	github.com/bradleyfalzon/ghinstallation/v2 v2.11.0
