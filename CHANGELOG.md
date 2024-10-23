@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.2](https://github.com/nabeken/go-github-apps/compare/v0.2.1...v0.2.2) (2024-10-23)
+
+
+### Bug Fixes
+
+* **deps:** update actions/checkout digest to 11bd719 ([594d854](https://github.com/nabeken/go-github-apps/commit/594d85407f0f23050d705524eb763166458b143f))
+* **deps:** update actions/checkout digest to eef6144 ([ed57b62](https://github.com/nabeken/go-github-apps/commit/ed57b62fe205d5ff6e1e3cb346e9dd9e64d89c1e))
+* **deps:** update actions/create-github-app-token digest to 5d869da ([e64953a](https://github.com/nabeken/go-github-apps/commit/e64953a0ef74d87d53349cd8b19c205237e0f86e))
+* **deps:** update dependency go to v1.23.2 ([cb10615](https://github.com/nabeken/go-github-apps/commit/cb10615f31ce96cb9a65202e0c35bd1e4b8986cd))
+* **deps:** update dependency golang to v1.23.2 ([e1575e5](https://github.com/nabeken/go-github-apps/commit/e1575e5d9ed093adc1bfc6244408246cd1b6a51c))
+* **deps:** update dependency nabeken/go-github-apps to v0.2.1 ([3981cc8](https://github.com/nabeken/go-github-apps/commit/3981cc84f04717ae32f3d00078189532ba180df0))
+
 ## [0.2.1](https://github.com/nabeken/go-github-apps/compare/v0.2.0...v0.2.1) (2024-09-05)
 
 
