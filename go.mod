@@ -7,7 +7,7 @@ toolchain go1.23.3
 require (
 	github.com/bradleyfalzon/ghinstallation/v2 v2.12.0
 	github.com/google/go-github/v64 v64.0.0
-	github.com/k0kubun/pp/v3 v3.3.0
+	github.com/k0kubun/pp/v3 v3.4.1
 )
 
 require (
@@ -17,5 +17,5 @@ require (
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
 	golang.org/x/sys v0.11.0 // indirect
-	golang.org/x/text v0.12.0 // indirect
+	golang.org/x/text v0.19.0 // indirect
 )
