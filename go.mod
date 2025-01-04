@@ -6,7 +6,7 @@ toolchain go1.23.4
 
 require (
 	github.com/bradleyfalzon/ghinstallation/v2 v2.13.0
-	github.com/google/go-github/v64 v64.0.0
+	github.com/google/go-github/v65 v65.0.0
 	github.com/k0kubun/pp/v3 v3.4.1
 )
 
