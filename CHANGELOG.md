@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.3](https://github.com/nabeken/go-github-apps/compare/v0.2.2...v0.2.3) (2025-01-21)
+
+
+### Bug Fixes
+
+* **deps:** update actions/setup-go digest to f111f33 ([294e80c](https://github.com/nabeken/go-github-apps/commit/294e80ca80578e7b34d0a0935a54d600c2c2b80f))
+* **deps:** update dependency go to v1.23.5 ([a77dfe4](https://github.com/nabeken/go-github-apps/commit/a77dfe40c0ee62d73eb890a645ced921ef008afe))
+* **deps:** update dependency golang to v1.23.5 ([#175](https://github.com/nabeken/go-github-apps/issues/175)) ([c5bde4c](https://github.com/nabeken/go-github-apps/commit/c5bde4c3fa9b6a9645ecf1f04f4d2699ec8bdf8a))
+* **deps:** update dependency nabeken/go-github-apps to v0.2.2 ([a6984d6](https://github.com/nabeken/go-github-apps/commit/a6984d6dccbffc3de17ae5a87471b3815538a298))
+* **deps:** update nabeken/go-github-apps digest to 7667a1e ([cb13a79](https://github.com/nabeken/go-github-apps/commit/cb13a797556365708e34c1ce49186c02a15a1370))
+
 ## [0.2.2](https://github.com/nabeken/go-github-apps/compare/v0.2.1...v0.2.2) (2025-01-04)
 
 
