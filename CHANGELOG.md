@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.4](https://github.com/nabeken/go-github-apps/compare/v0.2.3...v0.2.4) (2025-03-03)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to 21cfef2 ([#194](https://github.com/nabeken/go-github-apps/issues/194)) ([b5e81f8](https://github.com/nabeken/go-github-apps/commit/b5e81f83b7ed39419713e9753866030b779c0dd7))
+* **deps:** update dependency nabeken/go-github-apps to v0.2.3 ([152e7cf](https://github.com/nabeken/go-github-apps/commit/152e7cfdf2b09c3f78b193a519df1f171f0cb62e))
+* **deps:** update nabeken/go-github-apps digest to e03f0fc ([8fab71b](https://github.com/nabeken/go-github-apps/commit/8fab71b1f556714e1c06496d4eddecb7bb2fc2a5))
+
 ## [0.2.3](https://github.com/nabeken/go-github-apps/compare/v0.2.2...v0.2.3) (2025-02-22)
 
 
