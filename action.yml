@@ -2,7 +2,7 @@ inputs:
   version:
     description: "A version to install"
     # renovate: datasource=github-releases depName=nabeken/go-github-apps
-    default: "0.2.3"
+    default: "0.2.4"
   installation_id:
     description: "Github Apps Installation ID"
   app_id:
