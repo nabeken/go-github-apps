@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.2.5](https://github.com/nabeken/go-github-apps/compare/v0.2.4...v0.2.5) (2025-04-05)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token action to v2 ([ee545f4](https://github.com/nabeken/go-github-apps/commit/ee545f4ad7094e0a328e7684aef61ebef90e84b5))
+* **deps:** update actions/create-github-app-token action to v2 ([d5e02ff](https://github.com/nabeken/go-github-apps/commit/d5e02ff67c2121b49fc60fd67f160c5d227ffc5d))
+* **deps:** update actions/create-github-app-token digest to af35eda ([#203](https://github.com/nabeken/go-github-apps/issues/203)) ([05c39ea](https://github.com/nabeken/go-github-apps/commit/05c39eacabc3a4b78ada31f4f877d5602887798a))
+* **deps:** update actions/create-github-app-token digest to d72941d ([#204](https://github.com/nabeken/go-github-apps/issues/204)) ([3483197](https://github.com/nabeken/go-github-apps/commit/348319765920867bb7ed7396d68f63b3b7c1aa37))
+* **deps:** update actions/setup-go digest to 0aaccfd ([#202](https://github.com/nabeken/go-github-apps/issues/202)) ([48ba86d](https://github.com/nabeken/go-github-apps/commit/48ba86d71f74f4a8e1e395f54bb10ca374a8c4d5))
+* **deps:** update dependency go to v1.24.2 ([#206](https://github.com/nabeken/go-github-apps/issues/206)) ([55d9703](https://github.com/nabeken/go-github-apps/commit/55d97036d8232d04d92adefc9fa96414f5be357e))
+* **deps:** update dependency golang to v1.24.2 ([#207](https://github.com/nabeken/go-github-apps/issues/207)) ([7594623](https://github.com/nabeken/go-github-apps/commit/7594623c64773b7a8649ab5f5141a2d89a513715))
+* **deps:** update dependency nabeken/go-github-apps to v0.2.4 ([0b94a52](https://github.com/nabeken/go-github-apps/commit/0b94a52491b6bfaeb0d55a86887cec20706a0849))
+* **deps:** update dependency nabeken/go-github-apps to v0.2.4 ([5a7eb63](https://github.com/nabeken/go-github-apps/commit/5a7eb6308162953fc983a47ab6d0457b507b501e))
+* **deps:** update goreleaser/goreleaser-action digest to 9c156ee ([512c815](https://github.com/nabeken/go-github-apps/commit/512c815e5ab59f6b033e6f0a4537b8b5eca5161a))
+* **deps:** update goreleaser/goreleaser-action digest to 9c156ee ([3814ce6](https://github.com/nabeken/go-github-apps/commit/3814ce63d52c59b13a880f1994c39a91e78413c9))
+* **deps:** update module github.com/google/go-github/v69 to v70 ([77af1bb](https://github.com/nabeken/go-github-apps/commit/77af1bbe2cd784f451b493560ed06bf087bc64bb))
+* **deps:** update module github.com/google/go-github/v69 to v70 ([16d8003](https://github.com/nabeken/go-github-apps/commit/16d800300e9633b8dd1e3bb38733a2e97d229b54))
+
 ## [0.2.4](https://github.com/nabeken/go-github-apps/compare/v0.2.3...v0.2.4) (2025-03-07)
 
 
