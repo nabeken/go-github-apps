@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/bradleyfalzon/ghinstallation/v2"
-	"github.com/google/go-github/v74/github"
+	"github.com/google/go-github/v75/github"
 	"github.com/k0kubun/pp/v3"
 )
 
