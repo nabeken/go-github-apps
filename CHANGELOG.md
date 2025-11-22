@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.6](https://github.com/nabeken/go-github-apps/compare/v0.2.5...v0.2.6) (2025-11-22)
+
+
+### Bug Fixes
+
+* **deps:** update actions/checkout digest to 93cb6ef ([#256](https://github.com/nabeken/go-github-apps/issues/256)) ([13110ec](https://github.com/nabeken/go-github-apps/commit/13110ecd3c026f01ad7131b750a888b6db18190a))
+* **deps:** update actions/create-github-app-token digest to 7e473ef ([#260](https://github.com/nabeken/go-github-apps/issues/260)) ([e498a7d](https://github.com/nabeken/go-github-apps/commit/e498a7d62b26a84798f9ce1d34c633bbc678be8e))
+* **deps:** update actions/setup-go digest to 4dc6199 ([#258](https://github.com/nabeken/go-github-apps/issues/258)) ([9a4c40b](https://github.com/nabeken/go-github-apps/commit/9a4c40bfd1fcb1af2e39445d63fc70ff76e9628b))
+
 ## [0.2.5](https://github.com/nabeken/go-github-apps/compare/v0.2.4...v0.2.5) (2025-11-11)
 
 
