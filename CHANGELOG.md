@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.2.6](https://github.com/nabeken/go-github-apps/compare/v0.2.5...v0.2.6) (2026-02-26)
+
+
+### Bug Fixes
+
+* **deps:** update actions/checkout action to v6 ([#259](https://github.com/nabeken/go-github-apps/issues/259)) ([d562090](https://github.com/nabeken/go-github-apps/commit/d562090d71ecd9f9682daa8aea28e50ac93f2d80))
+* **deps:** update actions/checkout digest to 8e8c483 ([#262](https://github.com/nabeken/go-github-apps/issues/262)) ([4793831](https://github.com/nabeken/go-github-apps/commit/4793831ea9e939ce14f034da322627a025cbf380))
+* **deps:** update actions/checkout digest to 93cb6ef ([#256](https://github.com/nabeken/go-github-apps/issues/256)) ([13110ec](https://github.com/nabeken/go-github-apps/commit/13110ecd3c026f01ad7131b750a888b6db18190a))
+* **deps:** update actions/checkout digest to de0fac2 ([#274](https://github.com/nabeken/go-github-apps/issues/274)) ([70a39b5](https://github.com/nabeken/go-github-apps/commit/70a39b567463a68dba9cee23effa922654b4ae97))
+* **deps:** update actions/create-github-app-token digest to 29824e6 ([#266](https://github.com/nabeken/go-github-apps/issues/266)) ([338d4dc](https://github.com/nabeken/go-github-apps/commit/338d4dc9e9356e65128ba7b3d00d64632b62af42))
+* **deps:** update actions/create-github-app-token digest to 7e473ef ([#260](https://github.com/nabeken/go-github-apps/issues/260)) ([e498a7d](https://github.com/nabeken/go-github-apps/commit/e498a7d62b26a84798f9ce1d34c633bbc678be8e))
+* **deps:** update actions/setup-go digest to 4b73464 ([#281](https://github.com/nabeken/go-github-apps/issues/281)) ([6a5d478](https://github.com/nabeken/go-github-apps/commit/6a5d47839d8dffbd2be80e8a39d57c02bf5d59ee))
+* **deps:** update actions/setup-go digest to 4dc6199 ([#258](https://github.com/nabeken/go-github-apps/issues/258)) ([9a4c40b](https://github.com/nabeken/go-github-apps/commit/9a4c40bfd1fcb1af2e39445d63fc70ff76e9628b))
+* **deps:** update actions/setup-go digest to 7a3fe6c ([#268](https://github.com/nabeken/go-github-apps/issues/268)) ([f3e9ad3](https://github.com/nabeken/go-github-apps/commit/f3e9ad35d50aa20d1ee8da32681844baa7a68ff2))
+* **deps:** update dependency go to v1.25.5 ([#263](https://github.com/nabeken/go-github-apps/issues/263)) ([2e4ff7c](https://github.com/nabeken/go-github-apps/commit/2e4ff7c94ce4c0c201e2b2ec10ba65545e1504c0))
+* **deps:** update dependency go to v1.25.6 ([#269](https://github.com/nabeken/go-github-apps/issues/269)) ([bbba9d9](https://github.com/nabeken/go-github-apps/commit/bbba9d92133781af022b26a601d675be977533b7))
+* **deps:** update dependency go to v1.25.7 ([#275](https://github.com/nabeken/go-github-apps/issues/275)) ([b28c688](https://github.com/nabeken/go-github-apps/commit/b28c688461dae92d2b650141d185011a69916620))
+* **deps:** update dependency golang to v1.25.5 ([#264](https://github.com/nabeken/go-github-apps/issues/264)) ([c3369cf](https://github.com/nabeken/go-github-apps/commit/c3369cf9002f966d7ebbc6afcaee1b8c5b3e3492))
+* **deps:** update dependency golang to v1.25.6 ([#270](https://github.com/nabeken/go-github-apps/issues/270)) ([01944db](https://github.com/nabeken/go-github-apps/commit/01944db9b788c94551ab962f2c4abe6e7a7d45fa))
+* **deps:** update dependency golang to v1.25.7 ([#276](https://github.com/nabeken/go-github-apps/issues/276)) ([8698b20](https://github.com/nabeken/go-github-apps/commit/8698b20116ec3fd87ee0bf3092440288aa8327b2))
+* **deps:** update dependency nabeken/go-github-apps to v0.2.5 ([#254](https://github.com/nabeken/go-github-apps/issues/254)) ([e948333](https://github.com/nabeken/go-github-apps/commit/e9483336a7aba845b7dded98403fb2876891a891))
+* **deps:** update module github.com/google/go-github/v78 to v79 ([#255](https://github.com/nabeken/go-github-apps/issues/255)) ([17dcea3](https://github.com/nabeken/go-github-apps/commit/17dcea364ed4aa12dbe33b4c590ea2ac5d771440))
+* **deps:** update module github.com/k0kubun/pp/v3 to v3.5.1 ([#272](https://github.com/nabeken/go-github-apps/issues/272)) ([6c63906](https://github.com/nabeken/go-github-apps/commit/6c6390604a3f5363007286941ff5b27aa7599f18))
+* **deps:** update nabeken/go-github-apps digest to e948333 ([#261](https://github.com/nabeken/go-github-apps/issues/261)) ([f9b296e](https://github.com/nabeken/go-github-apps/commit/f9b296e0fe1694a966d14d2201046425da57d633))
+* **deps:** update suzuki-shunsuke/github-action-renovate-config-validator action to v2 ([#271](https://github.com/nabeken/go-github-apps/issues/271)) ([c2ca33b](https://github.com/nabeken/go-github-apps/commit/c2ca33b3ce134a81803bfcfe2505c47dc75b521e))
+
 ## [0.2.5](https://github.com/nabeken/go-github-apps/compare/v0.2.4...v0.2.5) (2025-11-11)
 
 
