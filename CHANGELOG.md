@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.7](https://github.com/nabeken/go-github-apps/compare/v0.2.6...v0.2.7) (2026-04-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency nabeken/go-github-apps to v0.2.6 ([#295](https://github.com/nabeken/go-github-apps/issues/295)) ([97ad491](https://github.com/nabeken/go-github-apps/commit/97ad491561568746a914a53ee97b861994cfae41))
+* **deps:** update nabeken/go-github-apps digest to 97ad491 ([#297](https://github.com/nabeken/go-github-apps/issues/297)) ([b0eeba3](https://github.com/nabeken/go-github-apps/commit/b0eeba3ef55ec128a476e215bdb864c01906a2cb))
+
 ## [0.2.6](https://github.com/nabeken/go-github-apps/compare/v0.2.5...v0.2.6) (2026-04-29)
 
 
