@@ -102,20 +102,25 @@ func showExport(token string) {
 }
 
 func showInstallations(appID int64, key []byte, githubURL string) {
-	atr, err := ghinstallation.NewAppsTransport(http.DefaultTransport, appID, key)
-	if err != nil {
-		log.Fatal(err)
+	atr, ghierr := ghinstallation.NewAppsTransport(http.DefaultTransport, appID, key)
+	if ghierr != nil {
+		log.Fatal(ghierr)
 	}
 
-	var client *github.Client
+	var (
+		client *github.Client
+		err    error
+	)
+
 	if githubURL != "" {
 		atr.BaseURL = githubURL
-		client, err = github.NewEnterpriseClient(githubURL, githubURL, &http.Client{Transport: atr})
-		if err != nil {
-			log.Fatalf("failed creating enterprise client: %v", err)
-		}
+		client, err = github.NewClient(github.WithEnterpriseURLs(githubURL, githubURL), github.WithTransport(atr))
 	} else {
-		client = github.NewClient(&http.Client{Transport: atr})
+		client, err = github.NewClient(github.WithTransport(atr))
+	}
+
+	if err != nil {
+		log.Fatalf("failed creating the client: %v", err)
 	}
 
 	opts := &github.ListOptions{
