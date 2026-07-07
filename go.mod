@@ -2,7 +2,7 @@ module github.com/nabeken/go-github-apps
 
 go 1.25.0
 
-toolchain go1.26.4
+toolchain go1.26.5
 
 require (
 	github.com/bradleyfalzon/ghinstallation/v2 v2.19.0
