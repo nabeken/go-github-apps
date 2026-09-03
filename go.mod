@@ -1,12 +1,12 @@
 module github.com/nabeken/go-github-apps
 
-go 1.25.0
+go 1.26.0
 
 toolchain go1.26.6
 
 require (
 	github.com/bradleyfalzon/ghinstallation/v2 v2.19.0
-	github.com/google/go-github/v90 v90.0.0
+	github.com/google/go-github/v91 v91.0.0
 	github.com/k0kubun/pp/v3 v3.5.2
 )
 
