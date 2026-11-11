@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.8](https://github.com/nabeken/go-github-apps/compare/v0.2.7...v0.2.8) (2026-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update go to v1.27.4 ([#324](https://github.com/nabeken/go-github-apps/issues/324)) ([a6771cc](https://github.com/nabeken/go-github-apps/commit/a6771cc74368eb7ad345ed67d6c6df9d15f00510))
+
 ## [0.2.7](https://github.com/nabeken/go-github-apps/compare/v0.2.6...v0.2.7) (2026-11-08)
 
 
